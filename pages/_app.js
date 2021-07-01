@@ -18,8 +18,8 @@ function MyApp({ Component, pageProps }) {
           openGraph={{
             type: 'website',
             locale: 'en_US',
-            url: 'https://www.readerdelights.com/',
-            site_name: 'Indian Reader',
+            url: 'https://www.boostinglink.com/',
+            site_name: 'Boost your links',
           }}
           // twitter={{
           //   handle: '@handle',

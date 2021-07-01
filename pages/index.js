@@ -20,12 +20,15 @@ export default function Home(props) {
    borderRadius="1rem"
    borderBottomColor="bg3"
    boxShadow="1rem 2rem bg1">
-     <Heading as="h2">Gold price in Bangalore</Heading>
+     <Heading as="h2">Boost ur links</Heading>
 
-     <Heading as="h5">{props.title.slice(8, 13)}</Heading>
+     {/* <Heading as="h5">{props.title.slice(8, 13)}</Heading> */}
 
      <Link href="/medications/montek_lc">
           <a>MonteK</a>
+        </Link>
+        <Link href="/dental/best_dental_tirupati">
+          <a>Dental Hospital Tirupati</a>
         </Link>
 
 
@@ -37,13 +40,13 @@ export default function Home(props) {
 }
 
 
-export async function getStaticProps() {
-  const { data } = await axios.get('https://www.goodreturns.in/gold-rates/kerala.html')
-  const $ = cheerio.load(data)
-  const title = $('#current-price').text()
-  const lastScraped = new Date().toISOString()
-  return {
-    props: { title, lastScraped },
-    revalidate: 10,
-  }
-}
+// export async function getStaticProps() {
+//   const { data } = await axios.get('https://www.goodreturns.in/gold-rates/kerala.html')
+//   const $ = cheerio.load(data)
+//   const title = $('#current-price').text()
+//   const lastScraped = new Date().toISOString()
+//   return {
+//     props: { title, lastScraped },
+//     revalidate: 10,
+//   }
+// }
